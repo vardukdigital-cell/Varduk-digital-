@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Varduk Digital | Digital Services in Jammu</title>
+<meta name="description" content="Varduk Digital Jammu - QR Scanner, Restaurant Menu Ordering Website, Home Delivery Website, Posters and Digital Services.">
+<meta name="robots" content="index, follow">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f6fb;color:#172033}
+header{background:#101c3a;color:white;text-align:center;padding:32px 15px}
+header h1{font-size:32px;margin:0 0 10px}
+header p{margin:5px}
+.hero{padding:28px 16px;text-align:center;background:#e5edff}
+.hero h2{color:#142b59}
+.container{max-width:850px;margin:auto;padding:18px}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{background:white;padding:20px;border-radius:12px;box-shadow:0 2px 10px #0001}
+.card h3{margin-top:0;color:#17366c}
+.price{font-size:23px;font-weight:bold;color:#087b48}
+.contact{background:#101c3a;color:white;text-align:center;padding:28px 15px;margin-top:25px}
+.contact a{color:#fff}
+footer{text-align:center;padding:15px;color:#555}
+</style>
+</head>
+<body>
+
+<header>
+<h1>VARDUK DIGITAL</h1>
+<p>Your Digital Solutions Partner</p>
+<p>Jammu, Jammu & Kashmir</p>
+</header>
+
+<section class="hero">
+<h2>आपके Business के लिए Digital Solutions</h2>
+<p>कम कीमत में QR Scanner, Restaurant Ordering और Website Services.</p>
+</section>
+
+<main class="container">
+<h2 style="text-align:center">Our Services & Prices</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>QR Scanner – Parking</h3>
+<p>Parking के लिए QR Scanner Solution.</p>
+<div class="price">₹249</div>
+</div>
+
+<div class="card">
+<h3>QR Scanner – Emergency</h3>
+<p>Emergency Contact QR Solution.</p>
+<div class="price">₹249</div>
+</div>
+
+<div class="card">
+<h3>Restaurant Menu QR</h3>
+<p>QR Scan करके Restaurant Menu देखें.</p>
+<div class="price">₹499</div>
+</div>
+
+<div class="card">
+<h3>Restaurant Menu + Ordering</h3>
+<p>Menu देखें और सीधे Order करें.</p>
+<div class="price">₹1499</div>
+</div>
+
+<div class="card">
+<h3>Home Delivery Website</h3>
+<p>अपने Business के लिए Online Ordering Website.</p>
+<div class="price">₹999</div>
+</div>
+
+<div class="card">
+<h3>Business Website</h3>
+<p>अपने Business की Professional Website बनवाएँ.</p>
+<div class="price">₹999</div>
+</div>
+
+<div class="card">
+<h3>Promotional Advertisement</h3>
+<p>अपने Business के प्रचार के लिए Digital Design.</p>
+<div class="price">₹499</div>
+</div>
+
+<div class="card">
+<h3>Visiting Card Design</h3>
+<p>Professional Digital Visiting Card.</p>
+<div class="price">₹299</div>
+</div>
+
+<div class="card">
+<h3>RC + Licence Assistance</h3>
+<p>RC और Licence संबंधी ऑनलाइन प्रक्रिया में सहायता.</p>
+<div class="price">₹499</div>
+</div>
+
+</div>
+</main>
+
+<section class="contact">
+<h2>Contact Varduk Digital</h2>
+<p>Jammu, Jammu & Kashmir, India</p>
+<p>Email: <a href="mailto:vkhanda55@gmail.com">vkhanda55@gmail.com</a></p>
+<p>अपने Digital Business की शुरुआत आज करें!</p>
+</section>
+
+<footer>
+© 2026 Varduk Digital. All Rights Reserved.
+</footer>
+
+</body>
+</html>
