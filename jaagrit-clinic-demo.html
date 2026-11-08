@@ -103,7 +103,7 @@ hud();setBasket();
  document.getElementById('setPinBtn').addEventListener('click',()=>{
    if(localStorage.getItem('jaagrit_owner_pin')&&!verifyPin()){alert('गलत PIN');return;}
    const p=prompt('नया 4 से 8 अंकों का PIN सेट करें:');
-   if(!p||!/^\\d{4,8}$/.test(p)){alert('4 से 8 अंकों का PIN डालें।');return;}
+   if(!p||!/^\d{4,8}$/.test(p)){alert('4 से 8 अंकों का PIN डालें।');return;}
    localStorage.setItem('jaagrit_owner_pin',p);alert('इस मोबाइल/ब्राउज़र में PIN सेट हो गया।');
  });
  document.getElementById('changeClinicBtn').addEventListener('click',()=>{
