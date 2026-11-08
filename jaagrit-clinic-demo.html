@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="theme-color" content="#10254a">
 <meta name="description" content="Varduk Digital Fruit Catcher - a 5 minute mobile motion sensor game.">
-<title>Jaagrit Clinic – Fruit Catcher | Varduk Digital</title>
+<title>Varduk Digital – Fruit Catcher</title>
 <style>
 :root{color-scheme:dark;--navy:#10254a;--gold:#ffd166;--mint:#8ff0c2}
 *{box-sizing:border-box}
@@ -35,7 +35,7 @@ button:disabled{opacity:.45}
 </head>
 <body>
 <main class="wrap">
-<h1>🍎 Jaagrit Clinic</h1>
+<h1>🍎 Varduk Digital</h1>
 <p class="sub">Fruit Catcher • 5 Minute Challenge</p>
 <section class="stats" aria-live="polite">
 <div class="stat"><small>SCORE</small><strong id="score">0</strong></div>
@@ -43,7 +43,7 @@ button:disabled{opacity:.45}
 <div class="stat"><small>LEVEL</small><strong id="level">1 / 3</strong></div>
 <div class="stat"><small>CAUGHT</small><strong id="caught">0</strong></div>
 </section>
-<button id="ownerBtn" style="margin:0 0 10px;background:#8ff0c2">Owner Settings</button><div id="ownerPanel" style="display:none;background:#ffffff13;border:1px solid #ffffff35;border-radius:14px;padding:12px;margin-bottom:12px"><p style="margin:0 0 8px">Owner-only demo controls. Set your PIN on this device first.</p><button id="setPinBtn">Set / Change Owner PIN</button> <button id="changeClinicBtn">Change Clinic Name</button><p class="hint" style="margin-bottom:0">Demo PIN is stored in this browser only; this is not secure for public customer sales.</p></div><div id="stage" aria-label="Game area">
+<button id="ownerBtn" style="margin:0 0 10px;background:#8ff0c2">Owner Settings</button><div id="ownerPanel" style="display:none;background:#ffffff13;border:1px solid #ffffff35;border-radius:14px;padding:12px;margin-bottom:12px"><p style="margin:0 0 8px">Varduk Digital Owner Controls — ग्राहक का नाम यहाँ से बदला जा सकता है।</p><button id="setPinBtn">Set / Change Owner PIN</button> <button id="changeClinicBtn">Change Customer Name</button><p class="hint" style="margin-bottom:0">Demo PIN is stored in this browser only; this is not secure for public customer sales.</p></div><div id="stage" aria-label="Game area">
 <div id="basket">🧺</div>
 <div id="overlay">
 <h2>Ready?</h2>
@@ -99,19 +99,19 @@ hud();setBasket();
  const ownerBtn=document.getElementById('ownerBtn'), panel=document.getElementById('ownerPanel');
  const clinicTitle=document.querySelector('h1');
  ownerBtn.addEventListener('click',()=>{panel.style.display=panel.style.display==='none'?'block':'none'});
- function verifyPin(){const saved=localStorage.getItem('jaagrit_owner_pin');if(!saved){alert('पहले Owner PIN सेट करें।');return false;}return prompt('Owner PIN डालें:')===saved;}
+ function verifyPin(){const saved=localStorage.getItem('varduk_owner_pin');if(!saved){alert('पहले Owner PIN सेट करें।');return false;}return prompt('Owner PIN डालें:')===saved;}
  document.getElementById('setPinBtn').addEventListener('click',()=>{
-   if(localStorage.getItem('jaagrit_owner_pin')&&!verifyPin()){alert('गलत PIN');return;}
+   if(localStorage.getItem('varduk_owner_pin')&&!verifyPin()){alert('गलत PIN');return;}
    const p=prompt('नया 4 से 8 अंकों का PIN सेट करें:');
    if(!p||!/^\d{4,8}$/.test(p)){alert('4 से 8 अंकों का PIN डालें।');return;}
-   localStorage.setItem('jaagrit_owner_pin',p);alert('इस मोबाइल/ब्राउज़र में PIN सेट हो गया।');
+   localStorage.setItem('varduk_owner_pin',p);alert('इस मोबाइल/ब्राउज़र में PIN सेट हो गया।');
  });
  document.getElementById('changeClinicBtn').addEventListener('click',()=>{
    if(!verifyPin()){alert('गलत PIN');return;}
-   const name=prompt('नया Clinic Name:',clinicTitle.textContent.replace('🍎 ',''));
-   if(name&&name.trim()){clinicTitle.textContent='🍎 '+name.trim();localStorage.setItem('jaagrit_clinic_name',name.trim());}
+   const name=prompt('ग्राहक/क्लीनिक का नया नाम:',clinicTitle.textContent.replace('🍎 ',''));
+   if(name&&name.trim()){clinicTitle.textContent='🍎 '+name.trim();localStorage.setItem('varduk_customer_name',name.trim());}
  });
- const savedName=localStorage.getItem('jaagrit_clinic_name');if(savedName)clinicTitle.textContent='🍎 '+savedName;
+ const savedName=localStorage.getItem('varduk_customer_name');if(savedName)clinicTitle.textContent='🍎 '+savedName;
 })();
 </script>
 </body>
