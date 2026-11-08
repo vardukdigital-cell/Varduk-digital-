@@ -94,25 +94,5 @@ hud();setBasket();
 })();
 </script>
 
-<script>
-(() => {
- const ownerBtn=document.getElementById('ownerBtn'), panel=document.getElementById('ownerPanel');
- const clinicTitle=document.querySelector('h1');
- ownerBtn.addEventListener('click',()=>{panel.style.display=panel.style.display==='none'?'block':'none'});
- function verifyPin(){const saved=localStorage.getItem('varduk_owner_pin');if(!saved){alert('पहले Owner PIN सेट करें।');return false;}return prompt('Owner PIN डालें:')===saved;}
- document.getElementById('setPinBtn').addEventListener('click',()=>{
-   if(localStorage.getItem('varduk_owner_pin')&&!verifyPin()){alert('गलत PIN');return;}
-   const p=prompt('नया 4 से 8 अंकों का PIN सेट करें:');
-   if(!p||!/^\d{4,8}$/.test(p)){alert('4 से 8 अंकों का PIN डालें।');return;}
-   localStorage.setItem('varduk_owner_pin',p);alert('इस मोबाइल/ब्राउज़र में PIN सेट हो गया।');
- });
- document.getElementById('changeClinicBtn').addEventListener('click',()=>{
-   if(!verifyPin()){alert('गलत PIN');return;}
-   const name=prompt('ग्राहक/क्लीनिक का नया नाम:',clinicTitle.textContent.replace('🍎 ',''));
-   if(name&&name.trim()){clinicTitle.textContent='🍎 '+name.trim();localStorage.setItem('varduk_customer_name',name.trim());}
- });
- const savedName=localStorage.getItem('varduk_customer_name');if(savedName)clinicTitle.textContent='🍎 '+savedName;
-})();
-</script>
 </body>
 </html>
